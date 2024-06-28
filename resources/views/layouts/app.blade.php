@@ -16,6 +16,7 @@
 
         <!-- Styles -->
         @livewireStyles
+        @filamentStyles
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -32,6 +33,8 @@
                 </header>
             @endif
 
+            @livewire('notifications')
+
             <!-- Page Content -->
             <main>
                 {{ $slot }}
@@ -41,5 +44,6 @@
         @stack('modals')
 
         @livewireScripts
+        @filamentScripts
     </body>
 </html>
